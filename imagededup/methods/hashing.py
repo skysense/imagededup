@@ -146,7 +146,9 @@ class Hashing:
 
         from glob import glob
 
-        files = [Path(f) for f in glob(str(image_dir) + '/**/*.png', recursive=True)]
+        images = glob(str(image_dir) + '/**/*.png', recursive=True)
+        images.extend(glob(str(image_dir) + '/**/*.jpeg', recursive=True))
+        files = [Path(f) for f in images]
 
         # files = [
         #     i.absolute() for i in image_dir.glob('*') if not i.name.startswith('.')
