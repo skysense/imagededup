@@ -144,9 +144,13 @@ class Hashing:
 
         image_dir = Path(image_dir)
 
-        files = [
-            i.absolute() for i in image_dir.glob('*') if not i.name.startswith('.')
-        ]  # ignore hidden files
+        from glob import glob
+
+        files = [Path(f) for f in glob(str(image_dir) + '/**/*.png', recursive=True)]
+
+        # files = [
+        #     i.absolute() for i in image_dir.glob('*') if not i.name.startswith('.')
+        # ]  # ignore hidden files
 
         logger.info(f'Start: Calculating hashes...')
 
