@@ -98,7 +98,7 @@ setup(
     install_requires=[
         'numpy',
         'Pillow',
-        'PyWavelets~=1.0.3',
+        'PyWavelets',
         'scipy',
         'tensorflow>1.0',
         'tqdm',
