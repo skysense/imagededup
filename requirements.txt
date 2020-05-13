@@ -1,6 +1,6 @@
 numpy<1.17
 Pillow<7.0.0
-PyWavelets~=1.0.3
+PyWavelets
 scipy
 tensorflow>1.0
 tqdm
